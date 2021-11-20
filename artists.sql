@@ -25,8 +25,8 @@ CREATE TABLE IF NOT EXISTS album (
 CREATE TABLE IF NOT EXISTS tracks (
 	track_id serial,
 	duration int not null default 0,
-	title varchar(100) not null,	
-	album_id serial references album(album_id),
+	title varchar(100) not null,
+	album_id int references album(album_id),
 	PRIMARY KEY (track_id)
 );
 
